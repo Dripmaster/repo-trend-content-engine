@@ -1,0 +1,4 @@
+interface:
+  display_name: "Trendshift Archive Curation"
+  short_description: "Date-based Trendshift archive updates"
+  default_prompt: "Use $curating-trendshift-archives to refresh Trendshift for today and append a dated archive section."
