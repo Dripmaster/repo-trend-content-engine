@@ -30,6 +30,14 @@ Trending repositories appear across many channels, but the raw feeds are noisy, 
 
 - `archives/`
   Dated and cumulative markdown outputs for curated repository snapshots.
+- `sources/`
+  Source-specific ingestion logic. Trendshift is the first source adapter.
+- `normalized/`
+  Source-agnostic schema and future normalized repository records.
+- `content/`
+  Channel-specific content outputs for X, Threads, and YouTube.
+- `tests/`
+  Verification for deterministic ingestion helpers.
 - `skills/curating-trendshift-archives/`
   Reusable skill for fetching Trendshift pages, deduping repositories, and updating archive sections by date.
 
@@ -37,6 +45,9 @@ Trending repositories appear across many channels, but the raw feeds are noisy, 
 
 - [archives/trendshift-50-repos-summary.md](./archives/trendshift-50-repos-summary.md)
 - [archives/trendshift-summary-2026-03-23.md](./archives/trendshift-summary-2026-03-23.md)
+- [normalized/schema.json](./normalized/schema.json)
+- [sources/trendshift/fetch_trendshift.py](./sources/trendshift/fetch_trendshift.py)
+- [tests/test_fetch_trendshift.py](./tests/test_fetch_trendshift.py)
 - [skills/curating-trendshift-archives/SKILL.md](./skills/curating-trendshift-archives/SKILL.md)
 
 ## Suggested GitHub repo metadata

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Normalized Trending Repository Record",
+  "type": "object",
+  "required": [
+    "repo",
+    "owner",
+    "name",
+    "source",
+    "snapshot_date",
+    "repo_url"
+  ],
+  "properties": {
+    "repo": {
+      "type": "string",
+      "description": "Full repository name in owner/name format."
+    },
+    "owner": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string",
+      "description": "Discovery source identifier such as trendshift, github-trending, reddit, or hacker-news."
+    },
+    "source_page": {
+      "type": "string",
+      "description": "Page-level source marker such as TS or GH."
+    },
+    "snapshot_date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "repo_url": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "summary_ko": {
+      "type": "string"
+    },
+    "usage_example_ko": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scores": {
+      "type": "object",
+      "properties": {
+        "novelty": { "type": "number" },
+        "practicality": { "type": "number" },
+        "virality": { "type": "number" },
+        "dev_interest": { "type": "number" },
+        "biz_interest": { "type": "number" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true
+}
